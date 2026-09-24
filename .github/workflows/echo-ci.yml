@@ -1,0 +1,23 @@
+name: examday
+
+on:
+  push:
+    branches:
+      - main
+  pull_request:
+    branches:
+      - main
+
+jobs:
+  run-echo:
+    runs-on: ubuntu-latest
+
+    steps:
+      - name: Checkout repository
+        uses: actions/checkout@v4
+
+      - name: Execute First Echo Command
+        run: echo "DevOps Exam Day"
+
+      - name: Execute Second Echo Command
+        run: echo "GitHub Actions is working successfully!"
